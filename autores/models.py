@@ -11,7 +11,7 @@ class Autores(models.Model):
         ('M', 'Masculino'),
         ('F', 'Feminino'),
     )
-    sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, default='Escolher Sexo')
+    sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, default='M')
     nome = models.CharField(max_length=255, null=False, blank=False)
     data_nascimento = models.DateField(null=False, blank=False)
     cpf = models.CharField(max_length=15, unique=True, null=False, blank=True)
